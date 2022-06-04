@@ -1,0 +1,29 @@
+.title { 
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: red;
+}
+
+.routeEmployers {
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+    font-size: large;
+}
+
+.routeEmployees {
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+    font-size: large;
+}
+
+.routePolicies {
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+    font-size: large;
+}
+
+.pTags {
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+    font-size: medium;
+}
