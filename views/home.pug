@@ -51,8 +51,33 @@ html
             p Expected Input: '[{ID: 12, First Name: 'Jim', Last Name: 'Hopper', SSN: '054-58-1273', DOB: '10/29/1942', Products: 'STD', EDOC: 01-25-1984, Current Employer ID: 4}]'   
         hr
         h2 Delete '/employees'
-            p Route deletes a specific employee
+            p Route deletes a specific employee without removing it from database
             p Route: http://localhost:1337/employees
             p Expected Input: '[{ID: 12, First Name: 'Bob', Last Name: 'Newby', SSN: '054-58-8569', DOB: '10/29/1942', Products: 'STD', EDOC: 01-25-1984, Current Employer ID: 10}]'   
         hr
-        
+        h2 Get '/policies'
+            p Route returns a list of all policies within database
+            p Route: http://localhost:1337/policies
+            p Expected Output: '[{ ID: 22, Employer Name: 'Hawkins Police Department' Coverage Type: 'STD' Funding: 'List Bill' Policy Number: 12548, Policy EDOC: 01-01-2022}]'
+        hr
+        h2 Get '/employer/employerID/:policies'
+            p Route returns a list of policies under a specific employer by their id
+            p Route: http://localhost:1337/employer/employerID/:policies
+            p Expected Output: '[{ ID: 25, Employer Name: 'RadioShack' Coverage Type: 'STD' Funding: 'List Bill' Policy Number: 2548, Policy EDOC: 01-01-1980}]'
+        hr
+        h2 Get '/policies/:id'
+            p Route returns a list of a specific policy by id
+            p Route: http://localhost:1337/employer/employerID/:policies
+            p Expected Output: '[{ ID: 25, Employer Name: 'RadioShack' Coverage Type: 'STD' Funding: 'Fully Insured' Policy Number: 2548, Policy EDOC: 01-01-1980}]'
+        hr
+        h2 Post '/policies'
+            p Route posts a new policy 
+            p Route: http://localhost:1337/employer/employerID/:policies
+            p Expected Output: '[{ ID: 15, Employer Name: 'Melvald's General Store' Coverage Type: 'STD' Funding: 'Self Insured' Policy Number: 15482, Policy EDOC: 01-01-1980}]'
+        hr
+        h2 Delete '/policies'
+            p Route deletes a policy without removing it from database
+            p Route: http://localhost:1337/employer/employerID/:policies
+            p Expected Output: '[{ ID: 15, Employer Name: 'Melvald's General Store' Coverage Type: 'STD' Funding: 'Self Insured' Policy Number: 15482, Policy EDOC: 01-01-1980}]'
+        hr  
+
