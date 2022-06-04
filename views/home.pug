@@ -1,0 +1,38 @@
+html
+    head 
+        title Disability Insurance API 
+        link(rel="stylesheet" href="/styles.css")
+    
+    body
+        h1 Disability Insurance API
+        hr 
+        h2 Get '/employers'
+            p Route returns a list of all employers
+            p Route: http://localhost:1337/employers
+            p Expected Output: '[{ID: 1, Name: The Avengers, STD Policy #: 234623, LTD Policy #: 45432, Business Address: 23 Avengers Tower Ave, New York City, NY 10001, Date Added: 07-01-2012, Date Deleted: N/A}]'
+        hr
+        h2 Get '/employers/id'
+            p Route returns a list of a single employer by ID
+            p Route: http://localhost:1337/employers/:id
+            p Expected Output: '[{ID: 1, Name: The Avengers, STD Policy #: 234623, LTD Policy #: 45432, Business Address: 23 Avengers Tower Ave, New York City, NY 10001, Date Added: 07-01-2022, Date Deleted: N/A}]'
+        hr    
+        h2 Post '/employers'
+            p Posts a new employer to existing list of employers
+            p Route: http://localhost:1337/employers
+            p Expected Entry: '[{Name: Hawkins Labratory, STD Policy #: 1185 LTD Policy #: N/A, Business Address: 85 Hawkins Lab Court, Hawkins, IN 19506, Date Added: 01-15-1984, Date Deleted: 07-15-2022}]'
+        hr
+        h2 Delete '/employers'
+            p Adds a deleted date from the list of employers, changes them to inactive. 
+            p Route: http://localhost:1337/employers
+            p Expected Entry: '[{ID: 10 Name: Stark Industries, STD Policy #: 12543, LTD Policy #: N/A, Business Address: 142 Howard Lane Los Angeles, CA 90001, Date Added: 9-10-20, Date Deleted: 06-04-2022}]'
+        hr
+        h2 Get '/employer/employerID/:employees'
+            p Route returns a list of all employees within under a specific employer 
+            p Route: http://localhost:1337/employer/
+            p Expected Output: '[{ID: 12, First Name: 'Joyce', Last Name: 'Bryers', SSN: '123-96-5879', DOB: '08/29/1942', Products: 'STD', EDOC: 01-25-1984, Current Employer ID: 2}]'
+        hr
+        h2 Get '/employees'
+            p Route returns a list of all employees within under a specific employer 
+            p Route: http://localhost:1337/employees
+            p Expected Output:   
+        
