@@ -1,4 +1,5 @@
-const express = require("express");
+/* eslint-disable quotes */
+const express = require('express');
 const { indexRender, catchAll } = require('./controllers/disabilityIns')
 
 const app = express();
