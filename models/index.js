@@ -11,14 +11,18 @@ const connection = new Sequelize(config.database, config.username, config.passwo
   host: config.host, dialect: config.dialect,
 })
 
-const employee = employeesModel(connection, Sequelize, employers)
+const employees = employeesModel(connection, Sequelize, employers)
 const employers = employersModel(connection, Sequelize)
 const policies = policiesModel(connection, Sequelize, employers)
 
+employees.belongsTo(employers)
+employers.hasMany(employees)
 
+policies.belongsTo(employers)
+employers.hasMany(policies)
 
 module.exports = {
-  employee,
+  employees,
   employers,
   policies,
   Op: Sequelize.Op
