@@ -2,11 +2,20 @@
 const express = require('express');
 const { indexRender, catchAll } = require('./controllers/disabilityIns')
 
+
 const app = express();
 
+app.set("view engine", "pug");
 app.use(express.static("public"));
 
-app.set("view engine", "pug");
+const employersRouter = require('./routes/employers.routes')
+const employeesRouter = require('./routes/employees.routes')
+const policiesRouter = require('/routes/policies.routes')
+
+app.use('/api/employers', employersRouter)
+app.use('/api/employees', employeesRouter)
+app.use('/api/policies', policiesRouter)
+
 
 app.get('/', indexRender);
 
