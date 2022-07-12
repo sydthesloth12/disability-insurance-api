@@ -1,2 +1,2 @@
-# marvel-api
+# Disability Insurance API
 Portfolio Project
